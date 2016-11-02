@@ -39,7 +39,7 @@ class Manager extends Employee {
 	 * post: The manager pay for the specified period 
 	 * has been returned.
 	 */
-	public double pay(double weeks) {
+	public double pay(double weeks, double hrs) {
 		double payEarned;
 		
 		payEarned = (yearlySalary / 52) * weeks;

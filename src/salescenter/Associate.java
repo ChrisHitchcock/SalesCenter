@@ -42,9 +42,8 @@ class Associate extends Employee {
 	 * post: The associate pay for the hours worked has been returned.
 	 */
         
-        public double pay(double weeks) {
+        public double pay(double weeks, double hrs) {
 		double payEarned;
-		
 		payEarned = (hourlyPayRate*40) * weeks;
 		return(payEarned);
 	}
