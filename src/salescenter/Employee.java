@@ -35,5 +35,5 @@ abstract class Employee {
 	 * pre: none
 	 * post: The employee pay has been returned.
 	 */
-	abstract double pay(double period, double hrs);
+	abstract double pay(double period);
 }

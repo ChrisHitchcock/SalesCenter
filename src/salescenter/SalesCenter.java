@@ -18,12 +18,11 @@ package salescenter;
  	 * pre: none
  	 * post: Employee name and pay has been displayed
  	 */
- 	public static void payEmployee(Employee emp, double payArg, double hours) {
+ 	public static void payEmployee(Employee emp, double payArg) {
  		NumberFormat money = NumberFormat.getCurrencyInstance();
  		double pay;
- 		
  		System.out.println(emp);
- 		pay = emp.pay(payArg, hours);
+ 		pay = emp.pay(payArg);
  		System.out.println(money.format(pay));	
  	}
 
@@ -55,17 +54,9 @@ package salescenter;
 				if (action.equalsIgnoreCase("E")) {
 					System.out.println(emp);
 				} else if (action.equalsIgnoreCase("P")) {
-					System.out.print("Enter the amount of weeks worked: ");
+					System.out.print("Enter the hours for associate or pay period for manager: ");
 					payArg = input.nextDouble();
-                                        if (emp==emp2||emp==emp3)
-                                        {
-                                            System.out.print("Enter the hours worked: ");
-                                            double hours = input.nextDouble();
-                                            payEmployee(emp, payArg, hours);
-                                        } else {
-                                            payEmployee(emp, payArg, 40);
-                                        }
-                                        
+                                        payEmployee(emp, payArg);
 				}
 			}
 		} while (!action.equalsIgnoreCase("Q"));
